@@ -35,7 +35,7 @@ for n in range(1, 101):
 
 ---
 
-## Student Data Analysis:
+## Student.CSV Project:
 
 Dataset: `student.csv`
 
@@ -73,6 +73,7 @@ Q4.
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 
+
 **Exercise 2: Indexing and Slicing**
 
 - Select columns and rows based on conditions
@@ -99,6 +100,7 @@ Q4.
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 
+
 **Exercise 3: Data Manipulation**
 
 - Add 'passed' column
@@ -109,12 +111,12 @@ Q4.
 ```python
 df['passed'] = df['mark'] >= 60
 df.rename(columns={'mark':'score'}, inplace=True)
-df.drop('passed', axis=1, inplace=True)
+df_drop_passed = df.drop(columns=['passed'])
 ```
 
 ### **Output Screenshots:**
 Q1.
-![W6.Q3.1](Student.cvs_Project/Screenshots/W6.Q3.1.jpg)
+![w6.Q3.1](Student.cvs_Project/Screenshots/w6.Q3.1.jpg)
 Q2.
 ![W6.Q3.2](Student.cvs_Project/Screenshots/W6.Q3.2.jpg)
 Q3.
@@ -122,6 +124,7 @@ Q3.
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+
 
 
 **Exercise 4: Aggregation and Grouping**
@@ -132,14 +135,14 @@ Q3.
 
 **Code Example:**
 ```python
-df.groupby('class')['score'].mean()
+df.groupby('class')['mark'].mean()
 df['class'].value_counts()
-df.groupby('gender')['score'].mean()
+df.groupby('gender')['mark'].mean()
 ```
 
 ### **Output Screenshots:**
 Q1.
-![W6.Q4.1](Student.cvs_Project/Screenshots/W6.Q4.1.jpg)
+![w6.Q4.1](Student.cvs_Project/Screenshots/w6.Q4.1.jpg)
 Q2.
 ![W6.Q4.2](Student.cvs_Project/Screenshots/W6.Q4.2.jpg)
 Q3.
@@ -147,6 +150,7 @@ Q3.
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+
 
 
 **Exercise 5: Advanced Operations**
@@ -157,16 +161,16 @@ Q3.
 
 **Code Example:**
 ```python
-pivot = df.pivot_table(index='class', columns='gender', values='score')
+pivot_table = pd.pivot_table(df, index='class', columns='gender', values='mark', aggfunc='mean')
 
-def grade(score):
-    if score >= 85: return 'A'
-    elif score >= 70: return 'B'
-    elif score >= 60: return 'C'
-    else: return 'D'
+def get_grade (mark):
+  if mark >= 85: return 'A'
+  elif mark >= 70: return 'B'
+  elif mark >= 60: return 'C'
+  else: return 'D'
 
-df['grade'] = df['score'].apply(grade)
-df.sort_values(by='score', ascending=False)
+df['grade'] = df['mark'].apply(get_grade)
+df.sort_values(by='mark', ascending=False)
 ```
 
 ### **Output Screenshots:**
@@ -179,6 +183,7 @@ Q3.
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+
 
 
 **Exercise 6: Exporting Data**
@@ -198,21 +203,74 @@ df.to_csv("student_with_grades.csv", index=False)
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 
+
 **Exercise 7: Visualisation**
 
 - create plots for marks, grades, or class distributions
 
-### **Output Screenshot:**
+  **Code Example:**
+```python
+from matplotlib import pyplot as plt
+import seaborn as sns
 
-![W7.Q1](Student.cvs_Project/Screenshots/W7.Q1.jpg)
-![W7.Q2](Student.cvs_Project/Screenshots/W7.Q2.jpg)
+# Plot number of students per grade
+sorted_df.groupby('grade').size().plot(
+    kind='barh',
+    color=sns.palettes.mpl_palette('Dark2')
+)
+
+# Remove top and right borders
+plt.gca().spines[['top', 'right']].set_visible(False)
+
+plt.xlabel('Number of Students')
+plt.ylabel('Grade')
+plt.title('Number of Students per Grade')
+
+plt.show()
+```
+
+### **Output Screenshots:**
+
+![W6.Q7.1](Student.cvs_Project/Screenshots/W6.Q7.1.jpg)
+![W6.Q7.2](Student.cvs_Project/Screenshots/W6.Q7.2.jpg)
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
-Requirements:
-pandas
-numpy
-matplotlib
-seaborn
+---
+<details>
+<summary>Project Structure</summary>
 
+```text
+## Project Structure
+Python_Data_Exercises/
+│
+├── FIZZBUZZ_Task/
+│   ├── FIZZBUZZ.ipynb
+│   └── FIZZBUZZ.jpg
+│
+├── Student.csv_Project/
+│   ├── Python_student_project.ipynb
+│   ├── student.csv
+│   └── Screenshots/
+│       ├── W6.Q1.1.jpg
+│       ├── W6.Q1.2.jpg
+│       ├── W6.Q1.3.jpg
+│       ├── W6.Q1.4.jpg
+│       ├── W6.Q2.1.jpg
+│       ├── W6.Q2.2.jpg
+│       ├── ...
+│
+└── README.md
+</details> ```
+---
+
+## ***Requirements
+The following Python libraries were used in this project:
+
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+
+These libraries are commonly used for data cleaning, exploration, analysis, and visualisation in Python.
