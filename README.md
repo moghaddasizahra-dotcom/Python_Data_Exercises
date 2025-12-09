@@ -247,6 +247,7 @@ plt.show()
 ---
 
 ## Project Structure
+```
 Python_Data_Exercises/
 │
 ├── FIZZBUZZ_Task/
@@ -266,10 +267,11 @@ Python_Data_Exercises/
 │       ├── ...
 │
 └── README.md
+```
 
 ---
 
-## ***Requirements
+## **Requirements**
 The following Python libraries were used in this project:
 
 - pandas  
