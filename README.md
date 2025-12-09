@@ -62,7 +62,7 @@ df.describe()
 ```
 
 ### **Output Screenshot:**
-[Click here to view screenshot](Screenshots/W6.Q1.1.jpg)
+[Click here to view Screenshots](Screenshots/W6.Q1.1.jpg)
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
