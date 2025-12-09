@@ -5,7 +5,7 @@ The exercises include tasks such as loading and exploring CSV data, indexing, da
 
 ---
 
-## FizzBuzz:
+## FizzBuzz :
 
 **Task:** Implement FizzBuzz in Python.  
 
@@ -42,6 +42,7 @@ Dataset: `student.csv`
 This task demonstrates 7 exercises:
 
 
+
 **Exercise 1: Loading and Exploring the Data**
 
 - Load CSV into Pandas DataFrame
@@ -74,6 +75,7 @@ Q4.
 
 
 
+
 **Exercise 2: Indexing and Slicing**
 
 - Select columns and rows based on conditions
@@ -101,6 +103,7 @@ Q4.
 
 
 
+
 **Exercise 3: Data Manipulation**
 
 - Add 'passed' column
@@ -123,7 +126,8 @@ Q3.
 ![W6.Q3.3](Student.cvs_Project/Screenshots/W6.Q3.3.jpg)
 
 ### **Notebook:**
-[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
 
 
 
@@ -149,7 +153,8 @@ Q3.
 ![W6.Q4.3](Student.cvs_Project/Screenshots/W6.Q4.3.jpg)
 
 ### **Notebook:**
-[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
 
 
 
@@ -182,7 +187,8 @@ Q3.
 ![W6.Q5.3](Student.cvs_Project/Screenshots/W6.Q5.3.jpg)
 
 ### **Notebook:**
-[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
 
 
 
@@ -201,6 +207,7 @@ df.to_csv("student_with_grades.csv", index=False)
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
 
 
 
@@ -262,7 +269,7 @@ Python_Data_Exercises/
 │       ├── ...
 │
 └── README.md
-</details> ```
+```
 ---
 
 ## ***Requirements
