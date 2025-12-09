@@ -41,6 +41,7 @@ Dataset: `student.csv`
 
 This task demonstrates 7 exercises:
 
+
 **Exercise 1: Loading and Exploring the Data**
 
 - Load CSV into Pandas DataFrame
@@ -50,9 +51,6 @@ This task demonstrates 7 exercises:
 
 **Code Example:**
 ```python
-from google.colab import drive
-drive.mount('/content/drive')
-
 import pandas as pd
 
 df = pd.read_csv("student.csv")
@@ -61,7 +59,7 @@ df.info()
 df.describe()
 ```
 
-### **Output Screenshot:**
+### **Output Screenshots:**
 Q1.
 ![W6.Q1.1](Student.cvs_Project/Screenshots/W6.Q1.1.jpg)
 Q2.
@@ -71,75 +69,94 @@ Q3.
 Q4.
 ![W6.Q1.4](Student.cvs_Project/Screenshots/W6.Q1.4.jpg)
 
-[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.1.jpg)
-[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.2.jpg)
-[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.3.jpg)
-[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.4.jpg)
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
+
+**Exercise 2: Indexing and Slicing**
+
+- Select columns and rows based on conditions
+
+**Code Example:**
+```python
+df['name']                # Select 'name' column
+df[['name','mark']]       # Select 'name' and 'mark' columns
+df.head(3)                # First 3 rows
+df[df['class'] == 'Four'] # Rows where class = 'Four'
+```
+
+### **Output Screenshots:**
+Q1.
+![W6.Q2.1](Student.cvs_Project/Screenshots/W6.Q2.1.jpg)
+Q2.
+![W6.Q2.2](Student.cvs_Project/Screenshots/W6.Q2.2.jpg)
+Q3.
+![W6.Q2.3](Student.cvs_Project/Screenshots/W6.Q2.3.jpg)
+Q4.
+![W6.Q2.4](Student.cvs_Project/Screenshots/W6.Q2.4.jpg)
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 
+**Exercise 3: Data Manipulation**
 
+- Add 'passed' column
+- Rename 'mark' to 'score'
+- Drop 'passed' column
 
-
-Exercise 2: Indexing and Slicing
-
-Select columns and rows based on conditions
-
-Code Example:
-
-df['name']                # Select 'name' column
-df[['name','mark']]       # Select 'name' and 'mark' columns
-df.head(3)                # First 3 rows
-df[df['class'] == 'Four'] # Rows where class = 'Four'
-
-
-Screenshot:
-
-
-Exercise 3: Data Manipulation
-
-Add 'passed' column
-
-Rename 'mark' to 'score'
-
-Drop 'passed' column
-
-Code Example:
-
+**Code Example:**
+```python
 df['passed'] = df['mark'] >= 60
 df.rename(columns={'mark':'score'}, inplace=True)
 df.drop('passed', axis=1, inplace=True)
+```
+
+### **Output Screenshots:**
+Q1.
+![W6.Q3.1](Student.cvs_Project/Screenshots/W6.Q3.1.jpg)
+Q2.
+![W6.Q3.2](Student.cvs_Project/Screenshots/W6.Q3.2.jpg)
+Q3.
+![W6.Q3.3](Student.cvs_Project/Screenshots/W6.Q3.3.jpg)
+
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
 
 
-Screenshot:
+**Exercise 4: Aggregation and Grouping**
 
+- Group by class and calculate the mean score
+- Count students per class
+- Average mark per gender
 
-Exercise 4: Aggregation and Grouping
-
-Group by class and calculate mean score
-
-Count students per class
-
-Average mark per gender
-
-Code Example:
-
+**Code Example:**
+```python
 df.groupby('class')['score'].mean()
 df['class'].value_counts()
 df.groupby('gender')['score'].mean()
+```
 
-Exercise 5: Advanced Operations
+### **Output Screenshots:**
+Q1.
+![W6.Q4.1](Student.cvs_Project/Screenshots/W6.Q4.1.jpg)
+Q2.
+![W6.Q4.2](Student.cvs_Project/Screenshots/W6.Q4.2.jpg)
+Q3.
+![W6.Q4.3](Student.cvs_Project/Screenshots/W6.Q4.3.jpg)
 
-Pivot table by class and gender
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
 
-Create grade column
 
-Sort by score descending
+**Exercise 5: Advanced Operations**
 
-Code Example:
+- Pivot table by class and gender
+- Create grade column
+- Sort by score descending
 
+**Code Example:**
+```python
 pivot = df.pivot_table(index='class', columns='gender', values='score')
 
 def grade(score):
@@ -150,25 +167,50 @@ def grade(score):
 
 df['grade'] = df['score'].apply(grade)
 df.sort_values(by='score', ascending=False)
+```
 
-Exercise 6: Exporting Data
+### **Output Screenshots:**
+Q1.
+![W6.Q5.1](Student.cvs_Project/Screenshots/W6.Q5.1.jpg)
+Q2.
+![W6.Q5.2](Student.cvs_Project/Screenshots/W6.Q5.2.jpg)
+Q3.
+![W6.Q5.3](Student.cvs_Project/Screenshots/W6.Q5.3.jpg)
 
-Save DataFrame with grades to a new CSV
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)Code Example:
 
-Code Example:
 
+**Exercise 6: Exporting Data**
+
+- Save the DataFrame with grades to a new CSV
+
+**Code Example:**
+```python
 df.to_csv("student_with_grades.csv", index=False)
+```
 
-Exercise 7: Visualization
+### **Output Screenshot:**
 
-Optional: create plots for marks, grades, or class distributions
+![W6.Q6](Student.cvs_Project/Screenshots/W6.Q6.jpg)
 
-Screenshot Example:
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 
-Notebook: student_analysis.ipynb
+**Exercise 7: Visualisation**
 
-Requirements
+- create plots for marks, grades, or class distributions
+
+### **Output Screenshot:**
+
+![W7.Q1](Student.cvs_Project/Screenshots/W7.Q1.jpg)
+![W7.Q2](Student.cvs_Project/Screenshots/W7.Q2.jpg)
+
+### **Notebook:**
+[Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
+
+Requirements:
 pandas
 numpy
 matplotlib
