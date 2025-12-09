@@ -27,3 +27,8 @@ for n in range(1, 101):
     else:
         print(n)
 ```
+### **Output Screenshot:**
+![FIZZBUZZ](FIZZBUZZ_Task/FIZZBUZZ.jpg)
+
+### **Notebook:**
+[Open FIZZBUZZ.ipynb](FIZZBUZZ_Task/FIZZBUZZ.ipynb)
