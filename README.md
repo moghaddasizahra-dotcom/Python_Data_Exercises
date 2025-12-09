@@ -245,10 +245,7 @@ plt.show()
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
 
 ---
-<details>
-<summary>Project Structure</summary>
 
-```text
 ## Project Structure
 Python_Data_Exercises/
 │
@@ -269,7 +266,7 @@ Python_Data_Exercises/
 │       ├── ...
 │
 └── README.md
-```
+
 ---
 
 ## ***Requirements
