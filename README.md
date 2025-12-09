@@ -62,7 +62,19 @@ df.describe()
 ```
 
 ### **Output Screenshot:**
-[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.1.jpg)(Student.cvs_Project/Screenshots/W6.Q1.2.jpg)(Student.cvs_Project/Screenshots/W6.Q1.3.jpg)(Student.cvs_Project/Screenshots/W6.Q1.4.jpg)
+Q1.
+![W6.Q1.1](Student.cvs_Project/Screenshots/W6.Q1.1.jpg)
+Q2.
+![W6.Q1.2](Student.cvs_Project/Screenshots/W6.Q1.2.jpg)
+Q3.
+![W6.Q1.3](Student.cvs_Project/Screenshots/W6.Q1.3.jpg)
+Q4.
+![W6.Q1.4](Student.cvs_Project/Screenshots/W6.Q1.4.jpg)
+
+[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.1.jpg)
+[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.2.jpg)
+[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.3.jpg)
+[Click here to view Screenshot](Student.cvs_Project/Screenshots/W6.Q1.4.jpg)
 
 ### **Notebook:**
 [Open Python_student_project.ipynb](Student.cvs_Project/Python_student_project.ipynb)
